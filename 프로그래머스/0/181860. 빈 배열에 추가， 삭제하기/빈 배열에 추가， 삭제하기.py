@@ -1,9 +1,8 @@
 def solution(arr, flag):
     answer = []
-    for i,v in enumerate(flag):
-        if v : #T/F
-            for k in range(arr[i]*2):
-                answer.append(arr[i])
-        else:
-            answer = answer[:-arr[i]]
+    for num, bol in zip(arr, flag):
+        if bol:
+            for i in range(num *2):
+                answer.append(num)
+        else: answer = answer[:-num]
     return answer

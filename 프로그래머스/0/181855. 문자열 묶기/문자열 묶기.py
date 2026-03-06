@@ -1,9 +1,9 @@
 def solution(strArr):
-    answer = {}
+    dic = {}
     
     for i in strArr:
         length = len(i)
-        
-        answer[length] = answer.get(length,0) +1
     
-    return max(answer.values())
+        dic[length] = dic.get(length,0) + 1
+    
+    return max(dic.values())

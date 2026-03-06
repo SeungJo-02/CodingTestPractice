@@ -1,10 +1,9 @@
 def solution(arr):
-    l = len(arr)
+    length = len(arr)
     target = 1
     
-    while(target < l):
+    while(target<length):
         target *= 2
         
-    arr += [0]*(target - l)
-    
-    return arr
+        
+    return arr + [0]*(target - length)

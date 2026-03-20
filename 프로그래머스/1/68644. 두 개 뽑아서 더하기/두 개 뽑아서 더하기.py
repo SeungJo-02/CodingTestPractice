@@ -1,4 +1,3 @@
-from itertools import combinations 
+from itertools import combinations
 def solution(numbers):
-    result = [sum(k) for k in combinations(numbers,2)]
-    return sorted(set(result))
+    return sorted(set([sum(i) for i in combinations(numbers,2)]))

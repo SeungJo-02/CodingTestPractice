@@ -1,10 +1,7 @@
 def solution(a, b):
-    answer = []
-    for i in range(abs(a-b)+1):
-        if a < b :
-            answer.append(i+a)
-        elif a > b:
-            answer.append(i+b)
-        else:
-            return a
-    return sum(answer)
+    if a <= b:
+        answer = sum([i for i in range(a, b+1)])
+    else:
+        answer = sum([i for i in range(b, a+1)])
+    
+    return answer

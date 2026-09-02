@@ -1,0 +1,12 @@
+# oh-my-claudecode (OMC) 상태 폴더
+.omc/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# macOS / 에디터
+.DS_Store
+.idea/

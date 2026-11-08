@@ -1,3 +1,3 @@
 def solution(numbers):
-    hap = sum(range(10))
-    return hap - sum(numbers)
+    total = sum(i for i in range(10))
+    return total - sum(numbers)

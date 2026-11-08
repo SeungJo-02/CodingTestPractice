@@ -1,4 +1,3 @@
 def solution(n):
-    text = str(n)
-    answer = sorted(text, reverse = True)
+    answer = sorted(str(n), reverse = True)
     return int("".join(answer))

@@ -1,9 +1,9 @@
 def solution(price, money, count):
-    total = 0
-    for i in range(count):
-        total += price + i * price
-    if money < total:
-        return total - money
+    want = 0
+    for i in range(1, count + 1):
+        want += price * i
+        
+    if money < want:
+        return want - money 
     else:
         return 0
-

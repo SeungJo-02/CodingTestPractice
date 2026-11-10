@@ -1,10 +1,2 @@
 def solution(arr1, arr2):
-    row = len(arr1)
-    col = len(arr1[0])
-    answer = [[0] * col for _ in range(row)]
-    
-    for i in range(row):
-        for j in range(col):
-            answer[i][j] = arr1[i][j] + arr2[i][j]
-    
-    return answer
+    return [[c1 + c2 for c1, c2 in zip(r1,r2)] for r1, r2 in zip(arr1,arr2)]

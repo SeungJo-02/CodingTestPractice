@@ -1,9 +1,6 @@
 def solution(t, p):
-    answer = 0
-    length = len(p)
-    li = [t[i:i+length] for i in range(len(t)-length+1)]
-    
-    for k in li:
-        if int(k) <= int(p):
-            answer +=1
-    return answer
+    answer = []
+    for i in range(len(t)- len(p) + 1):
+        answer.append(t[i:i + len(p)])
+        
+    return len([i for i in answer if i<= p])

@@ -1,4 +1,4 @@
 def solution(s):
-    s = list(map(int,s.split()))
-    mini, maxi = str(min(s)), str(max(s))
-    return mini + " " + maxi
+    parsing = list(map(int, s.split()))
+    Min, Max = min(parsing), max(parsing)
+    return f"{Min} {Max}"

@@ -1,12 +1,7 @@
 def solution(n):
-    answer = ""
-    while(True):
-        mok = n // 3
-        rest = n % 3
-        if mok !=0:
-            answer += str(rest)
-            n = mok
-        else:
-            answer += str(rest)
-            break
-    return int(answer,3)
+    jinsu_reverse = ""
+    while n > 0:
+        n, mod = divmod(n,3) # n에는 몫, mod에는 나머지
+        jinsu_reverse += str(mod) #문자열로 
+        
+    return int(jinsu_reverse, 3)

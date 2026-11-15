@@ -1,10 +1,7 @@
 def solution(s):
-    num_dic = {
-        "zero": "0", "one": "1", "two": "2", "three": "3", "four": "4",
-        "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9"
-    }
-    
-    for k, v in num_dic.items():
-        s = s.replace(k,v)
-    
+    # 먼저 노가다로 글짜 쪼개서 리스트로 만들기 
+    words = "zero one two three four five six seven eight nine".split()
+    #인덱스랑 값을 분리해서 반복문 돌리고 결과에 넣기
+    for i ,v in enumerate(words):
+        s = s.replace(v,str(i))
     return int(s)

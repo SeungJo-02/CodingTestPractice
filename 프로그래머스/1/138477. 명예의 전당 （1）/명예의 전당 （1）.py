@@ -1,12 +1,10 @@
-import heapq
 def solution(k, score):
-    li = []
     result = []
-    for j in score:
-        heapq.heappush(li,j)
-        if len(li) > k:
-            heapq.heappop(li)
-        result.append(min(li))
-        
-            
+    honor = []
+    for i in score:
+        honor.append(i)
+        honor.sort(reverse=True)
+        if len(honor) > k:
+            honor.pop()
+        result.append(honor[-1])
     return result

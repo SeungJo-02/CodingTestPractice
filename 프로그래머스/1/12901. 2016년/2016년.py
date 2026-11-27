@@ -1,8 +1,5 @@
+import datetime
 def solution(a, b):
-    months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    
-    days = ["FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU"]
-    
-    
-    total_days =  sum(months[:a - 1]) + (b - 1)
-    return days[total_days % 7]
+    t = datetime.date(2016,a,b)#날짜 객체 생성
+    days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+    return days[t.weekday()]#요일의 번호를 알려줌(월:0,일:6)
